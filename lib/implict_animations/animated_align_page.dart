@@ -25,33 +25,39 @@ class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('AnimatedAlign'),
-      ),
-      body: Stack(
-        children: [
-          AnimatedAlign(
-            alignment: _alignmentLogo1,
-            duration: const Duration(seconds: 3),
-            curve: Curves.bounceOut,
-            child: const FlutterLogo(size: 50),
-          ),
-          AnimatedAlign(
-            alignment: _alignmentLogo2,
-            duration: const Duration(seconds: 3),
-            curve: Curves.easeInCirc,
-            child: const FlutterLogo(size: 50),
-          ),
-          Center(
-            child: ElevatedButton(
-                onPressed: () => _changeAligment(),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                ),
-                child: const Text('INICIAR')),
-          )
-        ],
+    return SafeArea(
+      top: false,
+      bottom: true,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('AnimatedAlign'),
+        ),
+        body: Stack(
+          children: [
+            AnimatedAlign(
+              alignment: _alignmentLogo1,
+              duration: const Duration(seconds: 3),
+              curve: Curves.bounceOut,
+              child: const FlutterLogo(
+                size: 50,
+              ),
+            ),
+            AnimatedAlign(
+              alignment: _alignmentLogo2,
+              duration: const Duration(seconds: 3),
+              curve: Curves.easeInCirc,
+              child: const FlutterLogo(size: 50),
+            ),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () => _changeAligment(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                  ),
+                  child: const Text('INICIAR')),
+            )
+          ],
+        ),
       ),
     );
   }

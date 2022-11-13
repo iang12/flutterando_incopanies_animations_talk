@@ -14,9 +14,7 @@ class AnimatedOpacityPageState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan[300],
-        title: const Text(" AnimatedOpacity "),
-        automaticallyImplyLeading: false,
+        title: const Text("Animated Opacity "),
       ),
       body: Center(
         child: GestureDetector(

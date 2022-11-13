@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterando_inconpanies_animations_talk/explict_animations/choose_animation_explicit.dart';
+import 'package:flutterando_inconpanies_animations_talk/implict_animations/choose_animation_inplicit.dart';
+
+import 'explict_animations/explicit_aimation_example.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -20,13 +24,25 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            OutlinedButton(
-              onPressed: () {},
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (_) => const ChooseAnimationInplicit()),
+                );
+              },
               child: const Text('Animações Implicitas'),
             ),
             const SizedBox(height: 20),
-            OutlinedButton(
-              onPressed: () {},
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (_) => const AnimationExplicitExample()),
+                );
+              },
               child: const Text('Animações Explicitas'),
             ),
           ],
