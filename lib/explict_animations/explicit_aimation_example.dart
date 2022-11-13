@@ -20,27 +20,33 @@ class _AnimationExplicitExampleState extends State<AnimationExplicitExample>
   @override
   void initState() {
     super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 4));
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 4),
+    );
     _profilePictureAnimation = Tween(begin: 0.0, end: 50.0).animate(
       CurvedAnimation(
-          parent: _controller,
-          curve: const Interval(0.0, 0.20, curve: Curves.easeOut)),
+        parent: _controller,
+        curve: const Interval(0.0, 0.20, curve: Curves.easeOut),
+      ),
     );
     _contentAnimation = Tween(begin: 0.0, end: 34.0).animate(
       CurvedAnimation(
-          parent: _controller,
-          curve: const Interval(0.20, 0.40, curve: Curves.easeOut)),
+        parent: _controller,
+        curve: const Interval(0.20, 0.40, curve: Curves.easeOut),
+      ),
     );
     _listAnimation = Tween(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(
-          parent: _controller,
-          curve: const Interval(0.40, 0.75, curve: Curves.easeOut)),
+        parent: _controller,
+        curve: const Interval(0.40, 0.75, curve: Curves.easeOut),
+      ),
     );
     _fabAnimation = Tween(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(
-          parent: _controller,
-          curve: const Interval(0.75, 1.0, curve: Curves.easeOut)),
+        parent: _controller,
+        curve: const Interval(0.75, 1.0, curve: Curves.easeOut),
+      ),
     );
     _controller.forward();
   }
