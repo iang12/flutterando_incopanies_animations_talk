@@ -31,10 +31,10 @@ class AnimatedOpacityPageState extends State {
             width: width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
-              color: Colors.cyan[400],
+              color: Colors.cyan[200],
             ),
             child: AnimatedOpacity(
-              duration: const Duration(milliseconds: 700),
+              duration: const Duration(seconds: 5),
               curve: Curves.bounceIn,
               opacity: opacity,
               child: Row(

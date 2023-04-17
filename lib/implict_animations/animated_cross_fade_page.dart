@@ -4,7 +4,7 @@ class AnimatedCrossFadePage extends StatefulWidget {
   const AnimatedCrossFadePage({Key? key}) : super(key: key);
 
   @override
-  _AnimatedCrossFadePageState createState() => _AnimatedCrossFadePageState();
+  State<AnimatedCrossFadePage> createState() => _AnimatedCrossFadePageState();
 }
 
 class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage> {

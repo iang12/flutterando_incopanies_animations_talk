@@ -4,7 +4,7 @@ class AnimationExplicitExample extends StatefulWidget {
   const AnimationExplicitExample({super.key});
 
   @override
-  _AnimationExplicitExampleState createState() =>
+  State<AnimationExplicitExample> createState() =>
       _AnimationExplicitExampleState();
 }
 
@@ -87,7 +87,7 @@ class _AnimationExplicitExampleState extends State<AnimationExplicitExample>
                     children: <Widget>[
                       const SizedBox(height: 16.0),
                       Text(
-                        "Bom dia",
+                        "Boa noite 0/",
                         style: TextStyle(
                             fontSize: _contentAnimation.value,
                             fontWeight: FontWeight.w600),

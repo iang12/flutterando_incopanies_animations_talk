@@ -4,7 +4,7 @@ class AnimatedContainerPage extends StatefulWidget {
   const AnimatedContainerPage({Key? key}) : super(key: key);
 
   @override
-  _AnimatedContainerPageState createState() => _AnimatedContainerPageState();
+  State<AnimatedContainerPage> createState() => _AnimatedContainerPageState();
 }
 
 class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
@@ -18,17 +18,17 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
       body: Column(
         children: [
           AnimatedContainer(
-            duration: const Duration(milliseconds: 400),
+            duration: const Duration(milliseconds: 4),
             height: isPressed ? 300 : 100,
             width: isPressed ? 300 : 100,
-            color: Colors.blue,
+            color: Colors.green,
           ),
           AnimatedContainer(
             duration: const Duration(milliseconds: 400),
             height: isPressed ? 300 : 100,
             width: isPressed ? 300 : 100,
             color: Colors.yellow,
-            curve: Curves.bounceOut,
+            curve: Curves.bounceInOut,
           ),
         ],
       ),

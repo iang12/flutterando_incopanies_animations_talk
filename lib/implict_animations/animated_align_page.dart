@@ -4,7 +4,7 @@ class AnimatedAlignPage extends StatefulWidget {
   const AnimatedAlignPage({Key? key}) : super(key: key);
 
   @override
-  _AnimatedAlignPageState createState() => _AnimatedAlignPageState();
+  State<AnimatedAlignPage> createState() => _AnimatedAlignPageState();
 }
 
 class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
@@ -36,7 +36,7 @@ class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
           children: [
             AnimatedAlign(
               alignment: _alignmentLogo1,
-              duration: const Duration(seconds: 3),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.bounceOut,
               child: const FlutterLogo(
                 size: 50,

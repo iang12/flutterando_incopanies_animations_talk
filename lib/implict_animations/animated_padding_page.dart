@@ -4,13 +4,14 @@ class AnimatedPaddingPage extends StatefulWidget {
   const AnimatedPaddingPage({Key? key}) : super(key: key);
 
   @override
-  _AnimatedPaddingPageState createState() => _AnimatedPaddingPageState();
+  State<AnimatedPaddingPage> createState() => _AnimatedPaddingPageState();
 }
 
 class _AnimatedPaddingPageState extends State<AnimatedPaddingPage> {
+  bool isTop = true;
   double topValue = 10;
   double bottomValue = 340;
-  bool isTop = true;
+
   String actionOnTop = 'Cair';
   String actionOnBot = 'Pular';
 
