@@ -4,7 +4,7 @@ class ChooseAnimationExplicit extends StatefulWidget {
   const ChooseAnimationExplicit({Key? key}) : super(key: key);
 
   @override
-  _ChooseAnimationExplicitState createState() =>
+  State<ChooseAnimationExplicit> createState() =>
       _ChooseAnimationExplicitState();
 }
 

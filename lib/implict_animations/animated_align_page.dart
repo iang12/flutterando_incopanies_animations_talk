@@ -36,15 +36,15 @@ class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
           children: [
             AnimatedAlign(
               alignment: _alignmentLogo1,
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.bounceOut,
+              duration: const Duration(seconds: 10),
+              curve: Curves.easeInBack,
               child: const FlutterLogo(
                 size: 50,
               ),
             ),
             AnimatedAlign(
               alignment: _alignmentLogo2,
-              duration: const Duration(seconds: 3),
+              duration: const Duration(seconds: 10),
               curve: Curves.easeInCirc,
               child: const FlutterLogo(size: 50),
             ),

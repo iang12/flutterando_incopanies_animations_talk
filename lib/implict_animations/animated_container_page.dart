@@ -15,22 +15,24 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
       appBar: AppBar(
         title: const Text('Animated Container'),
       ),
-      body: Column(
-        children: [
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 4),
-            height: isPressed ? 300 : 100,
-            width: isPressed ? 300 : 100,
-            color: Colors.green,
-          ),
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 400),
-            height: isPressed ? 300 : 100,
-            width: isPressed ? 300 : 100,
-            color: Colors.yellow,
-            curve: Curves.bounceInOut,
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            AnimatedContainer(
+              duration: const Duration(seconds: 1),
+              height: isPressed ? 100 : 100,
+              width: isPressed ? 300 : 100,
+              color: Colors.pink,
+            ),
+            AnimatedContainer(
+              duration: const Duration(seconds: 1),
+              height: isPressed ? 300 : 100,
+              width: isPressed ? 300 : 100,
+              color: Colors.green,
+              curve: Curves.easeInOutBack,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.play_arrow_outlined),

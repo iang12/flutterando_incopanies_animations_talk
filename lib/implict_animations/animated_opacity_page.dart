@@ -34,12 +34,12 @@ class AnimatedOpacityPageState extends State {
               color: Colors.cyan[200],
             ),
             child: AnimatedOpacity(
-              duration: const Duration(seconds: 5),
+              duration: const Duration(seconds: 2),
               curve: Curves.bounceIn,
               opacity: opacity,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   FlutterLogo(size: 70),
                   Padding(
                     padding: EdgeInsets.only(right: 30.0),
